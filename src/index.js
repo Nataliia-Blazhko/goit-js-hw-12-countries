@@ -31,7 +31,11 @@ const debouncedQuery = debounce(event => {
         const list = document.querySelector('.countriesList');
 
         list.addEventListener('click', event => {
+          if (event.target.nodeName !== 'LI') {
+            return;
+          }
           input.value = event.target.textContent;
+
           countryCard.innerHTML = countryData(
             countries.filter(
               country => country.name === event.target.textContent,

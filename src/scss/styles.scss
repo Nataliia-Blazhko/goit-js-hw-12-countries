@@ -1,0 +1,60 @@
+@import './fonts';
+@import './variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $RobotoRegular;
+  font-size: 14px;
+  background-image: url('../assets/map.svg');
+  background-size: cover;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#enter-country {
+  margin-top: 40px;
+  width: 50%;
+  line-height: 50px;
+  font-size: 18px;
+  padding: 0 10px;
+  opacity: 0.8;
+}
+
+.title {
+  font-family: $RobotoBold;
+  font-size: 46px;
+  text-align: center;
+}
+.country-card {
+  font-size: 34px;
+}
+.country-data {
+  display: flex;
+
+  .country-info {
+    width: 50%;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    b {
+      font-family: $RobotoMedium;
+    }
+  }
+  .image-container {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.countriesList > li {
+  cursor: pointer;
+}

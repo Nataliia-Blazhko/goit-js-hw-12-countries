@@ -37,9 +37,9 @@ const debouncedQuery = debounce(event => {
           input.value = event.target.textContent;
 
           countryCard.innerHTML = countryData(
-            countries.filter(
+            countries.find(
               country => country.name === event.target.textContent,
-            )[0],
+            ),
           );
         });
       } else if (countries.length > 10) {
